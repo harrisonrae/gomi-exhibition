@@ -47,7 +47,7 @@
         /* Window Style */
         .window {
             position: absolute;
-            width: 520px;
+            width: 550px;
             height: 450px;
             background: white;
             border: 2px solid #000080;
@@ -84,6 +84,15 @@
         .window .content video {
             width: 100%;
             height: 100%;
+        }
+
+        .window .content textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 14px;
         }
 
         /* Taskbar */
@@ -134,7 +143,7 @@
 <body>
     <div class="desktop">
         <!-- Icons --> <!--to add new vid change icon topdistance and name vere, then the stuff in the windows section -->
-        <div class="icon" style="top: 50px; left: 50px;" onclick="openWindow('video1')">
+        <div class="icon" style="top: 50px; left: 150px;" onclick="openWindow('video1')">
             <img src="media/brownflag.png" alt="Video Icon">
             <span>Brown Flag</span>
         </div>
@@ -149,9 +158,47 @@
             <span>Gomi Kite 5</span>
         </div>
 
+        <div class="icon" style="top: 350px; left: 50px;" onclick="openWindow('video4')">
+            <img src="media/Sequence 01.00_00_00_25.Still001.jpg" alt="Video Icon">
+            <span>Gomi noren</span>
+        </div>
+
+        <div class="icon" style="top: 550px; left: 150px;" onclick="openWindow('video5')">
+            <img src="media/Sequence 01.00_00_20_04.Still002.jpg" alt="Video Icon">
+            <span>Quilt of gifts from Marsha and Atsue</span>
+        </div>
+
+        <div class="icon" style="top: 50px; left: 50px;" onclick="openWindow('video6')">
+            <img src="media/bbb.jpg" alt="Video Icon">
+            <span>More gomi at the beach</span>
+        </div>
+
+
+
+        <div class="icon" style="top: 550px; right: 50px;" onclick="openWindow('textDoc')">
+            <img src="media/rubbish.jpg" alt="Text Icon">
+            <span>About</span>
+        </div>
+
+        
 
 
         <!-- Windows -->
+        <div class="window" id="textDoc" style="top: 100px; right: 300px;">
+            <div class="title-bar">
+                <span>About the show</span>
+                <span class="close" onclick="closeWindow('textDoc')">X</span>
+            </div>
+            <div class="content">
+                <textarea readonly>
+            'Gomi' is a show by Harrison Rae that is exploring the materiality of garbage. In 'Gomi', Rae is showcasing a collection of flags, kites and quilts, sewing together items collected during his time as artist in residence at Studio Kura.
+           
+            Drawing upon the history of boro as a traditional handcraft, 'Gomi' explores the transformative potential of discarded materials and highlights the artistry and cultural resonance of repair and renewal.
+                    
+            'Gomi' ties the domestic to the global through considering creative approaches to the challenges of sustainability, and uses flags, kites and quilts as objects to connect the past with the present.</textarea>
+            </div>
+        </div>
+
         <div class="window" id="video1" style="top: 100px; left: 100px;">
             <div class="title-bar">
                 <span>Video 1</span>
@@ -178,7 +225,7 @@
             </div>
         </div>
 
-        <div class="window" id="video3" style="top: 300px; left: 300px;">
+        <div class="window" id="video3" style="top: 150px; left: 400px;">
             <div class="title-bar">
                 <span>gomi beach</span>
                 <span class="close" onclick="closeWindow('video3')">X</span>
@@ -189,7 +236,48 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+            </div>
+
+            <div class="window" id="video5" style="top: 50px; left: 400px;">
+                <div class="title-bar">
+                    <span>quilt of gifts from marsha and atsue</span>
+                    <span class="close" onclick="closeWindow('video5')">X</span>
+                </div>
+                <div class="content">
+                    <video controls>
+                        <source src="media/Sequence 01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                </div>
+
+                <div class="window" id="video6" style="top: 50px; left: 400px;">
+                    <div class="title-bar">
+                        <span>quilt of gifts from marsha and atsue</span>
+                        <span class="close" onclick="closeWindow('video6')">X</span>
+                    </div>
+                    <div class="content">
+                        <video controls>
+                            <source src="media/Sequence 01_3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    </div>
+
+            <div class="window" id="video4" style="top: 50px; left: 600px;">
+                <div class="title-bar">
+                    <span>ikisan noren</span>
+                    <span class="close" onclick="closeWindow('video4')">X</span>
+                </div>
+                <div class="content">
+                    <video controls>
+                        <source src="media/noren.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
         </div>
+
+    
 
     </div>
 
